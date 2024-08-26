@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin:0;padding: 0;}
+        a:link,a:visited{text-decoration: none; color:black}
+        ul,li{list-style:none;}
+        /* 여기까지가 항상 하는 reset인거같애요 */
+        .clear:after{
+            content:"";
+            display:block; clear:both;
+        }
+
+        .hd{background-color: blue;}
+
+        .menu{width: 1360px; margin: 0 auto; background-color: skyblue;}
+        /* .menu:after {
+            content:"";
+            display:block; clear:both;
+        } */
+        .menu>li{float: left; width:20%;}
+        .menu>li>a{
+            line-height: 60px;
+            /* line-height: 줄간격임 나중에는 사용하지 않음 */
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+        .menu a:hover{
+            background-color: green;
+            color: white;
+        }
+        .visual{
+            background-color: green;
+            height:400px;
+        }
+    </style>
+</head>
+<body>
+    <header class ="hd">
+        <ul class="menu clear">
+            <!-- clear를 stylesheet에 넣어서 재사용 가능 -->
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+            <li><a href="#">menu5</a></li>
+        </ul>
+    </header>
+    <div class="visual"></div>
+</body>
+</html>
