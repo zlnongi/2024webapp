@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site practice</title>
+</head>
+<style>
+    /* reset 먼저 */
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    a:link, a:visited{text-decoration: none; color: #333;}
+    ul, li{list-style:none;}
+    .clear:after{
+        content: "";
+        display: block;
+        clear:both;
+    }
+    img{display: block;}
+
+    /* header */
+    .hd {
+        background-color: rgb(130, 35, 142);
+    }
+
+    .menuWrap {
+        width: 1360px;
+        background-color: #ffc0cb;
+        margin: 0 auto;
+        padding: 10px 0;
+    }
+
+    .menuWrap h1{ 
+        /* 확실한 h1의 사이즈 여기서 정해줘야함 */
+        float:left;
+        font-size: 20px;
+        height: 50px;
+        width: 150px;
+        background-color: blueviolet;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menuWrap .gnb{
+        /* 메뉴의 크기에 따라 사이즈가 달라짐 */
+        float: right;
+    }
+
+    .menuWrap .gnb ul li {
+        /* 메뉴의 크기를 확실하게 정해줘야함 */
+        float: left;
+        background-color: blue;
+        width: 100px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    .menuWrap .gnb a{
+        /* 부모의 크기를 따라감 100% 100% 이므로 100px 50px임 */
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    
+
+    }
+
+</style>
+<body>
+    <header class="hd ">
+        <div class="menuWrap clear">
+            <h1>logo</h1>
+            <nav class="gnb">
+                <ul class="clear">
+                    <li>menu0</li>
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a></li>
+                    <li><a href="#">menu3</a></li>
+                    <li><a href="#">menu4</a></li>
+                    <li><a href="#">menu5</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    
+</body>
+</html>
