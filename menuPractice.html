@@ -4,73 +4,123 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>site practice</title>
-</head>
-<style>
-    /* reset 먼저 */
-    *{margin: 0; padding: 0; box-sizing: border-box;}
-    a:link, a:visited{text-decoration: none; color: #333;}
-    ul, li{list-style:none;}
-    .clear:after{
-        content: "";
-        display: block;
-        clear:both;
-    }
-    img{display: block;}
 
-    /* header */
-    .hd {
-        background-color: rgb(130, 35, 142);
-    }
-
-    .menuWrap {
-        width: 1360px;
-        background-color: #ffc0cb;
-        margin: 0 auto;
-        padding: 10px 0;
-    }
-
-    .menuWrap h1{ 
-        /* 확실한 h1의 사이즈 여기서 정해줘야함 */
-        float:left;
-        font-size: 20px;
-        height: 50px;
-        width: 150px;
-        background-color: blueviolet;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .menuWrap .gnb{
-        /* 메뉴의 크기에 따라 사이즈가 달라짐 */
-        float: right;
-    }
-
-    .menuWrap .gnb ul li {
-        /* 메뉴의 크기를 확실하게 정해줘야함 */
-        float: left;
-        background-color: blue;
-        width: 100px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-    }
-
-    .menuWrap .gnb a{
-        /* 부모의 크기를 따라감 100% 100% 이므로 100px 50px임 */
-        display: flex;
-        width: 100%;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        color: white;
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.css" integrity="sha512-UBY4KATrDAEKgEEU+RAfY4yWrK0ah43NGwNr5o/xmncxsT+rv8jp7MI3a00I0Ep3NbAx05U5kw3DvyNCoz+Wcw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* reset 먼저 */
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        a:link, a:visited{text-decoration: none; color: #333;}
+        ul, li{list-style:none;}
+        .clear:after{
+            content: "";
+            display: block;
+            clear:both;
+        }
+        img{display: block;}
     
+        /* header */
+        .hd {
+            background-color: rgb(130, 35, 142);
+        }
+    
+        .menuWrap {
+            width: 1360px;
+            background-color: #ffc0cb;
+            margin: 0 auto;
+            padding: 10px 0;
+        }
+    
+        .menuWrap h1{ 
+            /* 확실한 h1의 사이즈 여기서 정해줘야함 */
+            float:left;
+            font-size: 20px;
+            height: 50px;
+            width: 150px;
+            background-color: blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        .menuWrap .gnb{
+            /* 메뉴의 크기에 따라 사이즈가 달라짐 */
+            float: right;
+        }
+    
+        .menuWrap .gnb ul li {
+            /* 메뉴의 크기를 확실하게 정해줘야함 */
+            float: left;
+            background-color: blue;
+            width: 100px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+    
+        .menuWrap .gnb a{
+            /* 부모의 크기를 따라감 100% 100% 이므로 100px 50px임 */
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            transition: 0.3s;
+        }
+    
+        .menuWrap .gnb a:hover{
+            background-color: skyblue;
+        }
+    
+        .visual {
+            /* width: 1360px; */
+            margin: 0 auto;
+        }
 
-    }
+        .bx-wrapper {
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        border: 0 none;
+        background: #fff;
+        }
+        
+        .visual .item{
+            height: 300px;
+            background-color: skyblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
-</style>
+        .visual .item.st1 {
+            background-image: url(banner01.png);
+        }
+
+        .visual .item.st2 {
+            background-image: url(banner02.png);
+        }
+
+        .visual .item.st3{
+            background-image: url(banner03.png);
+        }
+
+        .visual .item .textWrap{
+            /* background-color: #fff; */
+            width: 1360px;
+            padding-left: 20px;
+            color: white;
+            text-shadow: 0 0 50px blue;
+
+        }
+    
+    </style>
+</head>
+
 <body>
     <header class="hd ">
         <div class="menuWrap clear">
@@ -88,6 +138,40 @@
 
         </div>
     </header>
-    
+
+    <div class="visual">
+        <ul class="bxslider">
+            <li class="item st1">
+                <div class="textWrap">
+                    <h3>Lorem, ipsum.</h3>
+                    <p>Lorem ipsum dolor sit amet, cing elit. <br> In impedit, ab, atione vel pariatur quo iure commodi quos animi. Perferendis!</p>
+                </div>
+            </li>
+            <li class="item st2">
+                <div class="textWrap">
+                    <h3>Lorem, ipsum.</h3>
+                    <p>Lorem ipsum dolor sit amet, cing elit. <br> In impedit, ab, atione vel pariatur quo iure commodi quos animi. Perferendis!</p>
+                </div>
+            </li>
+            <li class="item st3">
+                <div class="textWrap">
+                    <h3>Lorem, ipsum.</h3>
+                    <p>Lorem ipsum dolor sit amet, cing elit. <br> In impedit, ab, atione vel pariatur quo iure commodi quos animi. Perferendis!</p>
+                </div>
+            </li>
+            
+
+        </ul>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js" integrity="sha512-LaBO0tZh1+6Ebk+EnHt/WsGM0UnmkCXfQ1rfhGmpa5MXUdslNuSSELBRcteHKz4k4ny+Op10Ax2fPoTNq+VcUg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(".bxslider").bxSlider({
+            auto: true
+
+        });
+    </script>
 </body>
 </html>
