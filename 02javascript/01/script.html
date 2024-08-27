@@ -75,5 +75,23 @@
    // $("#var1").html(car.name) // jquery 선택자 잡기가 편하다. 위에랑 똑같은거임
     document.getElementsByClassName('var2')[0].innerHTML = car.speed // var2의 0번을 가져와라
 </script>
+
+<!-- 스타일 변경하기 -->
+<style>
+    .box{width: 100px; height: 100px; background-color: skyblue; transition: 0.3s;}
+</style>
+<div class="box">
+
+</div>
+
+<button onclick="boxChange()">click</button>
+<script>
+    // 스타일 변경
+    function boxChange() { // 클릭하면 박스 색깔 red로 변함
+        document.getElementsByClassName("box")[0].style.backgroundColor = "red"; // 문자형태이므로 반드시 따옴표 써줘야함
+        document.getElementsByClassName("box")[0].style.width = "200px"; // 없애려면 크기를 조작해야함
+
+    }
+</script>
 </body>
 </html>
