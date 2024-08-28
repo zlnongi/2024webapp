@@ -6,12 +6,60 @@
     <title>Document</title>
 </head>
 <body>
-    변수 let, const
+    <!-- 변수 let, const
     함수 arrow function
     배열 spread operater
     반복문 for of / map 객체 
     class (수업안할거임 자바에서 배우기 때문에)
-    promise 동기, async await 비동기 >> 매우 중요
-    
+    promise 동기, async await 비동기 >> 매우 중요 ****
+    module -> import export -->
+
+    <script>
+        //변수
+        var test = 1; // 더이상 var 안씀
+
+        let han = 1; // 초기화 불가능 값을 바꿀 수는 있음 const는 아예 고정값
+        han = 10;
+        // console.log(han)
+
+        // arrow function
+        const obj = function() { // 무명함수
+            console.log(han)
+        }
+        obj();
+
+        const obj1 = () => {
+            console.log(han)
+        }
+        obj1();
+
+        const obj2 = (x, y) => {
+            return x+y
+        }
+        document.write(obj2(10, 20));
+
+        const obj3 =(x,y) => x*y
+        document.write(obj3(10,20));
+
+        const a = [1,2,3]
+        const b = [...a] // copy한거임 a값은 변경되지 않으므로 편하다
+        b[0] = 10
+        console.log("b :"+b);
+        console.log("a :"+a);
+
+        // for of
+        for(const item of a) { // a의 배열값들을 가져온거임 -> 이거 파이썬이랑 비슷한거같은데!?!?
+            console.log(item)
+        }
+
+        for (let i=0; i<a.length; i++) {
+            console.log(a[i])
+        } // 이거를 for of로 바꾼것
+
+        // 그냥 console.log(this)하면 윈도우를 가리키고 있다
+
+
+    </script>
+
 </body>
 </html>
