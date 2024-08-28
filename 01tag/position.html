@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        html,body{
+            height: 100%;
+            /* 이렇게 안해주면 높이값이 없어서 center로 가지않음 (align-items안 먹음) */
+        }
+        body {
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .boxWrap {
+            width: 400px; height: 400px;
+            background-color: skyblue;
+            position: relative;
+            /* relative는 dblock이랑 비슷하다 */
+            /* overflow: hidden; */
+        }
+        .boxWrap div{
+            width: 100px;
+            height: 100px;
+        }
+        .boxWrap .box1{
+            background-color: black;
+            /* position: absolute; 
+            /* 포지션 넣게 되면 부모자에도 포지션이 있어야함. 그냥 여기에만 position absolute 있으면 아예 전체화면 기준이됨 .boxWrap에 포지션에 있어야함 */
+            /* right: -50px; */ 
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            z-index:2;
+            /* 얠 젤 올리고싶으면 z-index값이 높으면됨 */
+        }
+        .boxWrap .box2 {
+            background-color: red;
+            position: absolute;
+            z-index: 1;
+        }
+        .boxWrap .box3{
+            background-color: blue;
+            position: absolute;
+            top: 100px; left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxWrap">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+
+    </div>
+</body>
+</html>
