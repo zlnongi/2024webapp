@@ -1,0 +1,82 @@
+@charset "utf-8";
+
+body{
+    /* height: 300vh; */
+    font-family: "Noto Sans KR";
+}
+
+img{display: block;}
+
+.hd {
+    /* position: relative; */
+    width:100%;
+    margin: 0 auto;
+}
+.bg-sky{
+    background-color: skyblue !important;
+}
+
+.bg-gray{
+    background-color: rgb(223, 222, 222);
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+.menuWrap {
+    background-color: pink;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 10px 0;
+}
+
+.menuWrap .gnb ul{
+    display: flex;}
+
+.menuWrap .gnb ul li{
+    width: 150px; height: 50px;
+    display: flex;
+    /* text-align: center; */
+    justify-content: center;
+    align-items: center;
+}
+
+.menuWrap .gnb a{
+    color: #fff;
+    display: inline-block;
+    height: 76px;
+    line-height: 76px;
+    font-weight: 700;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.menuWrap .gnb a:hover{
+    color: #333;
+}
+
+.visual {
+    display: block;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.visual .content {
+    height: 100vh;
+    background-color: #7f828b;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+
+.visual .content.st1{
+    background-image: url(../images/slider1.jpg);
+}
