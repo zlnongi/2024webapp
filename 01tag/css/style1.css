@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+.container{
+    width: 1360px;
+    margin: 0 auto;
+    
+}
+
+.bg-gray{
+    background-color: rgb(238, 237, 237) !important;
+}
+
+.bg-orange{
+    background-color: orange !important;
+    /* !important 없으면 약하니까 색을 무조건 넣기 위해서는!!!!!! 필요함 */
+}
+.bg-sky{
+    background-color: skyblue !important;
+}
+
+.hd{
+    box-shadow: 0 0 10ox rgba(0,0,0,0,3);
+}
+.menuWrap{
+    /* logo 정렬위해서인가? */
+    display: flex;
+    justify-content: space-between;
+    /* height: 70px;  */
+    padding: 10px 0;
+}
+
+.menuWrap .gnb ul {display: flex;}
+.menuWrap .gnb li{width: 150px; height: 50px;}
+.menuWrap .gnb a{
+    display: block;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+.menuWrap .gnb a:hover{
+    background-color: white;
+}
+.menuWrap .sns {
+    display: flex;
+    align-self: center;
+    gap: 10px;
+ 
+}
+
+.menuWrap .sns li{
+    width: 40px; height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #00f;
+    color: white;
+
+}
+
+.visual{
+    height: 400px;
+}
