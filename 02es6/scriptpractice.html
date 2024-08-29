@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    <script>
+        // promise는 성공과 실패 값을 가져오는 기계 라고 생각하면됨
+        // 더 진행된게 async : 성공만 가져오는 기계 await
+        // try catch가 또 껴들어감 (reject된 거는)
+
+        //  const pro = new Promise(function(성공, 실패){
+        //     console.log(1)
+        //     let num = 101
+        //     if(num == 100) {
+        //         성공(num)
+        //     } else{
+        //         실패()
+        //     }
+        // }) // Promise는 object 객체가 들어옴 resolve: 성공, reject: 실패
+
+        // pro.then(function(num){
+        //     conole.log("성공입니다.", num)
+        // }).catch(function(){
+        //     console.log("실패입니다.")
+        // })
+
+
+        const pro1 = new Promise(function(resolve, reject){
+            setTimeout(function(){
+                resolve("hi")
+            }, 3000) // 3초 있다가
+        })
+
+        pro.then(function(value){ // value에 hi가 들어가는건가??
+            console.log(value)
+            document.getElementById("demo").innerHTML = value
+        })
+
+        async function fn1(){
+            await setTimeout() // 얘를 꼭 기다리겠다
+        }
+
+
+    </script>
+</body>
+</html>

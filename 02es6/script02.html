@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+     <!-- 변수 let, const
+    함수 arrow function
+    배열 spread operater
+    반복문 for of / map 객체 
+    class (수업안할거임 자바에서 배우기 때문에)
+    promise 동기, async await 비동기 >> 매우 중요 ****
+    module -> import export -->
+
+    <script>
+        // 시간이 걸리는게 비동기임 !! 값이 들어오면 실행을 시키려면 함수 안에 콜백함수를 계속 넣어야하는것
+        // 자바스크립트는 그것을 기다리지 않고 빨리 실행되는 것부터 실행됨
+        console.log(1);
+        setTimeout(function(){
+            console.log(2)
+        },1000);
+        console.log(3);
+        // 비동기 함수들은 스택으로 가는게 아니라 웹api로 갓다가 큐로 들어감 대기상태로 들어감
+        // 스택에 빈공간이 있으면 그제서야 실행
+        //
+
+        function fn1() {
+            console.log(1)
+            fn() // fn2()가 들어감
+        }
+
+        function fn2() {
+            console.log(2)
+        }
+
+        fn1(fn2);
+
+        fn1(function(){}) //fn1이 먼저 실행되고나서 fn2가 실행됨
+
+        // promise는 성공과 실패 값을 가져오는 기계 라고 생각하면됨
+        // 더 진행된게 async : 성공만 가져오는 기계 await
+        // try catch가 또 껴들어감 reject된 거는 
+
+        fn1(fn2).then(function(){}).then(function(){}).catch(); // 콜백함수(함수에 함수 넣음) 사용 -> 너무 불편하니까 나온게 promise
+
+        const pro = new Promise(function(성공, 실패){
+            console.log(1)
+            let num = 101
+            if(num == 100) {
+                성공(num)
+            } else{
+                실패()
+            }
+        }) // Promise는 object 객체가 들어옴 resolve: 성공, reject: 실패
+
+        pro.then(function(num){
+            conole.log("성공입니다.", num)
+        }).catch(function(){
+            console.log("실패입니다.")
+        })
+
+        const pro1 = new Promise(function(resolve, reject){
+            setTimeout(function(){
+                resolve("hi")
+            }, 3000) // 3초 있다가
+        })
+
+        pro.then(function(value){
+            console.log(value)
+        })
+
+
+        
+    </script>
+    
+</body>
+</html>
