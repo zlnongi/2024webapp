@@ -154,9 +154,13 @@ img{display: block;}
     position: relative;
     width: 1280px;
     margin: 0 auto;
-    padding: 180px 32px;
+    padding: 180px 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+}
+
+.cont .intersect{
+    width: 1280px;
 }
 
 .cont .intersect .subarea{
@@ -185,6 +189,7 @@ img{display: block;}
 
 .cont .intersect .explain{
     padding-left: 624px;
+    padding-right: 32px;
     font-size: 18px;
     line-height: 1.56;
 }
@@ -232,8 +237,11 @@ img{display: block;}
 
 .twoimgs {
     width: 1280px;
+    height: 462px;
     margin: 0 auto;
     margin-top: 160px;
+    position: relative;
+    margin-bottom: 160px;
 }
 
 .twoimgs .yellowbox {
@@ -243,4 +251,31 @@ img{display: block;}
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background-color: #ffd44a;
+}
+
+.twoimgs .img2 {
+    /* position: absolute;
+    right: 0;
+    bottom: 0; */
+    position: absolute;
+    top: 102px;
+    right: 0;
+    width: 592px;
+    height: 360px;
+    /* bottom: 102px; */
+
+}
+
+.main-notice{
+    background-color: rgb(238, 238, 238);
+    width: 100%;
+}
+
+.main-notice .swipe-container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.swipe-container .cardnotice .cardWrap {
+    background-color: #fff;
 }

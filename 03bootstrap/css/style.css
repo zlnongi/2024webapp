@@ -1,0 +1,11 @@
+@charset "utf-8";
+
+.visualWrap{
+    background: url(../images/bg-top.jpg) no-repeat center;
+    background-size: cover
+}
+
+.bg-gray{
+    background-color: rgb(215, 215, 215);
+}
+
