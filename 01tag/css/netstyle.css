@@ -276,6 +276,19 @@ img{display: block;}
     margin: 0 auto;
 }
 
-.swipe-container .cardnotice .cardWrap {
-    background-color: #fff;
+.cont .swipe-container .cardnotice {
+    position: relative;
 }
+.cont .swipe-container .cardnotice .customer {
+    /* background-color: #fff; */
+    background-color: pink;
+    /* width: 1280px; */
+    /* height: 466px; */
+    position: absolute;
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+
