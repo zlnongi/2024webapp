@@ -135,16 +135,31 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="swipe-container">
-                <div class="cardnotice">
-                    <div class="cardWrap">
-                        
+                <div class="swipe-container">
+                    <div class="cardnotice">
+                        <!-- <div class="cardWrap">
+                            test
+                        </div> -->
+                        <div class="container customer">
+                            <div class="owl-carousel owl-theme">
+                                <div class="item rounded">
+                                    <div class="sliderView" style ="gap:50px;">
+                                        test
+                                        <!-- <img src="./images/content1.jpg" alt="" class="img-fluid" style="width: 340x; height:466px;"> -->
+                                
+                                    </div>
+                                   
+                                
+                                </div>
+                            </div>
+                        </div>
+    
                     </div>
-
                 </div>
             </div>
+
+            
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -156,6 +171,23 @@
             controls: false
 
         });
+
+        $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:30, // 간격 변경이라는데 왜 안됨?
+            responsiveClass:true,
+            autoplay: true,
+            responsive:{
+                0:{
+                    items:1,
+                },
+                600:{
+                    items:3,
+                }
+
+
+            }
+        })
     </script>
     
     
