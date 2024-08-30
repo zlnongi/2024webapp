@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/magnific-popup.css" integrity="sha512-UhvuUthI9VM4N3ZJ5o1lZgj2zNtANzr3zyucuZZDy67BO6Ep5+rJN2PST7kPj+fOI7M/7wVeYaSaaAICmIQ4sQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/style1.css">
 </head>
 <body>
    
-    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
+    <nav class="header navbar navbar-expand-lg bg-body-tertiary shadow fixed-top">
         <div class="container">
           <a class="navbar-brand" href="#">
             <img src="./images/logo.svg" alt="" class="img-fluid" style="height: 50px;">
@@ -109,26 +111,251 @@
         </div>
     </div>
 
-    <div class="container customer">
-        <h2 class="text-center conTitle">CUSTOMER</h2>
-        <p class="text-center mb-5">Lorem ipsum dolor sit amet.</p>
-        <div class="owl-carousel owl-theme">
-            <div class="item rounded">
-                <div class="sliderView d-flex gap-3 p-3">
-                    <img src="./images/user.svg" alt="" class="img-fluid" style="width: 150px;">
+    <div class="bg-info py-5 mb-5">
+        <div class="container customer">
+            <h2 class="text-center conTitle">CUSTOMER</h2>
+            <p class="text-center mb-5">Lorem ipsum dolor sit amet.</p>
+            <div class="owl-carousel owl-theme">
+                <div class="item rounded">
+                    <div class="sliderView d-flex gap-3 p-3">
+                        <img src="./images/user.svg" alt="" class="img-fluid" style="width: 150px;">
+                    </div>
+                    <p style="margin-left: 10px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, voluptatem?</p>
+                    <img src="./images/quote.svg" alt="" style="width: 30px;" class="d-block ms-auto">
                 </div>
-                <p style="margin-left: 10px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, voluptatem?</p>
-                <img src="./images/quote.svg" alt="" style="width: 30px;" class="d-block ms-auto">
+            </div>
+        </div>
+        
+    </div>
+
+   
+    <div class="container portfolio">
+        <h2 class="text-center conTitle">PORTFOLIO</h2>
+            <p class="text-center mb-3">Lorem ipsum dolor sit amet.</p>
+        <div class="btn-group mb-3">
+            <button data-filter="" class="btn btn-primary active" id="btn">ALL</button>
+            <button data-filter=".web" class="btn btn-primary">WEB</button>
+            <button data-filter=".vue" class="btn btn-primary">VUE</button>
+            <button data-filter=".react" class="btn btn-primary">REACT</button>
+            <button data-filter=".jpa" class="btn btn-primary">JPA</button>
+        </div>
+
+        <div class="row view">
+            <div class="col-6 col-lg-3 element-item web mb-3">
+                <a href="./images/servicos/1.jpg" class="popup-link">
+                    <img src="./images/servicos/1.jpg" alt="" class="img-fluid rounded">
+                </a>
+            </div>
+    
+            <div class="col-6 col-lg-3 element-item react mb-3">
+                <a href="./images/servicos/2.jpg" class="popup-link">
+                    <img src="./images/servicos/2.jpg" alt="" class="img-fluid rounded">
+                </a>
+            </div>
+
+            <div class="col-6 col-lg-3 element-item web mb-3">
+                <a href="./images/servicos/3.jpg" class="popup-link">
+                    <img src="./images/servicos/3.jpg" alt="" class="img-fluid rounded">
+                </a>
+            </div>
+
+            <div class="col-6 col-lg-3 element-item vue mb-3">
+                <a href="./images/servicos/4.jpg" class="popup-link">
+                    <img src="./images/servicos/4.jpg" alt="" class="img-fluid rounded">
+                </a>
+            </div>
+
+            <div class="col-6 col-lg-3 element-item react mb-3">
+                <a href="./images/servicos/5.jpg" class="popup-link">
+                    <img src="./images/servicos/5.jpg" alt="" class="img-fluid rounded">
+                </a>
+            </div>
+
+            <div class="col-6 col-lg-3 element-item web mb-3">
+                <a href="./images/servicos/6.jpg" class="popup-link">
+                    <img src="./images/servicos/6.jpg" alt="" class="img-fluid rounded">
+                </a>
+            </div>
+
+            <div class="col-6 col-lg-3 element-item web mb-3">
+                <a href="./images/servicos/7.jpg" class="popup-link">
+                    <img src="./images/servicos/7.jpg" alt="" class="img-fluid rounded">
+                </a>
+            </div>
+
+            <div class="col-6 col-lg-3 element-item web mb-3">
+                <a href="./images/servicos/1.jpg" class="popup-link">
+                    <img src="./images/servicos/1.jpg" alt="" class="img-fluid rounded">
+                </a>
+            </div>
+
+            <div class="col-6 col-lg-3 element-item web mb-3">
+                <a href="./images/servicos/8.jpg" class="popup-link">
+                    <img src="./images/servicos/8.jpg" alt="" class="img-fluid rounded">
+                </a>
+            </div>
+
+            <div class="col-6 col-lg-3 element-item web mb-3">
+                <a href="./images/servicos/9.jpg" class="popup-link">
+                    <img src="./images/servicos/9.jpg" alt="" class="img-fluid rounded">
+                </a>
+            </div>
+    
+        </div>
+    </div>
+
+    <div class="online py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-6 offset-md-3 text-white text-center">
+                    <!-- md일땐 6개 먹는데 offset 3개?? 이게먼말이징 -->
+                     <h2>CONTACT US</h2>
+                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, sapiente.</p>
+                    <button class="btn btn-danger">NOW</button>
+                </div>
             </div>
         </div>
     </div>
    
-    <div style="height: 500px;"></div>
+    <div class="footer py-5">
+        <div class="container py-5 px-5">
+            <div class="row mb-5">
+                <div class="col-lg-3 mb-5">
+                    <img src="../images/images2/udacity-logo.png" alt="" style="width: 50px;">
+                </div>
+                <div class="col-6 col-lg">
+                    <h4>Company</h4>
+                        <ul>
+                            <li>menu1</li>
+                            <li>menu1</li>
+                            <li>menu1</li>
+                            <li>menu1</li>
+                            <li>menu1</li>
+                            <li>menu1</li>
+                        </ul>
+                </div>
+
+                <div class="col-6 col-lg">
+                    <h4>Product</h4>
+                    <ul>
+                      <li>menu1</li>
+                      <li>menu1</li>
+                      <li>menu1</li>
+                      <li>menu1</li>
+                      <li>menu1</li>
+                    </ul>
+                  </div>
+                  <div class="col-6 col-lg">
+                    <h4>Community</h4>
+                    <ul>
+                      <li>menu1</li>
+                      <li>menu1</li>
+                      <li>menu1</li>
+                      <li>menu1</li>
+                      <li>menu1</li>
+                    </ul>
+                  </div>
+                  <div class="col-6 col-lg">
+                    <h4>Company</h4>
+                    <ul>
+                      <li>menu1</li>
+                      <li>menu1</li>
+                      <li>menu1</li>
+                      <li>menu1</li>
+                      <li>menu1</li>
+                    </ul>
+                  </div>
+            </div>
+            <hr>
+
+        <div class="row mb-5">
+            <div class="col-md-6 mb-3">
+                <ul class="d-flex justify-content-center justify-content-md-start">
+                    <li><a href="javascript:void(0)">Privacy</a></li>
+                    <!-- "javascript:void(0) -> # 들어가면 자꾸 올라가니까 그것을 방지 -->
+                    <li class="px-2">/</li>
+                    <li><a href="#!">Teams</a></li>
+                    <li class="px-2">/</li>
+                    <li><a href="#!">Site map</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <ul class="d-flex justify-content-center gap-1 justify-content-md-end">
+                    <li><a href="#!"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#!"><i class="fa-brands fa-google"></i></a></li>
+                    <li><a href="#!"><i class="fa-brands fa-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 offset-md-2 text-center">
+                <p class="small">Lorem ipsum dolor sit.</p>
+                <p class="small">Lorem ipsum dolor sit <br> amet consectetur adipisicing elit.Asperiores, ipsum.</p>
+            </div>
+        </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- <div style="height: 500px;"></div> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.spkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js" integrity="sha512-fCRpXk4VumjVNtE0j+OyOqzPxF1eZwacU3kN3SsznRPWHgMTSSo7INc8aY03KQDBWztuMo5KjKzCFXI/a5rVYQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/fontawesome.min.js" integrity="sha512-NeFv3hB6XGV+0y96NVxoWIkhrs1eC3KXBJ9OJiTFktvbzJ/0Kk7Rmm9hJ2/c2wJjy6wG0a0lIgehHjCTDLRwWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+
+        $(window).scroll(function(){ // 윈도우에서 스크롤을 함
+            let scroll = $(window).scrollTop() // scroll실행되면 숫자가 콘솔에 우다다 나옴
+            console.log(scroll)
+
+            if(scroll>300){
+                $(".header").addClass("fixed-top") // header에 픽스드 탑을 고정 ㅇㅇ
+            } else {
+                $(".header").removeClass("fixed-top")
+            }
+        })
+
+        function hScroll(){
+
+        }
+        hScroll(); // 실행
+
+        const btns = $(".portfolio .btn-group button") // 버튼이 클릭이 되면 유사배열 생성 btns[0][1][2][3] 이런식으로 유사배열이 생성이됨 active 필요
+        // $(".porfolio .btn-group button").click()
+        // 자바스크립트에서는 for문 돌려줘야함 어렵다...
+        btns.click(function() { // 콜백함수 사용 버튼을 클릭하면 어떤 애가 나옴?? 확인 필요
+            let i = $(this).index()
+            console.log(i); // this: 자기자신
+            btns.removeClass("active") // 버튼 누르면 acitve class 다 빼줘야함 ㅇㅇ 당연함
+            btns.eq(i).addClass("active") // 버튼을 누르면 active가 들어가므로 버튼색이 바뀜
+        
+            let selector = btns.eq(i).attr("data-filter") 
+            console.log(selector) // 클릭하면 data-filter 속성이 콘솔에 뜸
+
+            $(".portfolio .view").isotope({ // 버튼 누르는거에 따라 이미지 바뀜
+                filter:selector
+            })
+
+
+            $(".view .popup-link").magnificPopup({type:"image"})
+
+
+
+
+
+
+            window.onload = function(){ // 트리거 -> 명령만 내려주는 것
+                $(".portfolio #btn").trigger("click") // 선택자를 잡아서 trigger로 억지로 클릭이라는 이벤트를 실행함
+            }
+        })
+
+
         $('.owl-carousel').owlCarousel({
             loop:true,
             margin:10,
