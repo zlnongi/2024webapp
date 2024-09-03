@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+@import 'base.scss';
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+a:link,
+a:visited {
+   text-decoration: none;
+   color: $base-font-color;
+}
+
+body {
+   font-family: $primary-font;
+   font-size: $base-font-size;
+}
+.container {
+   width: 1300px; // 최초값
+   margin: 0 auto;
+   // background: $primary-color;
+
+   @media screen and (max-width: 1300px) {
+      // 반응형
+      width: 100%;
+   }
+}
