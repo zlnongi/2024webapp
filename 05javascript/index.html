@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const num = [1, 2, 3, 4, 5];
+      const fruit = ["apple", "banana"];
+      // const numData = num.filter(function (item) {
+      //   return item == 3;
+      // });
+
+      const numData = num.filter((item) => {
+        // filter는 걸러주는 역할을 함
+        return item == 3;
+      });
+
+      const numData1 = num.filter((item) => item >= 3);
+
+      console.log(numData);
+      console.log(numData1);
+
+      const numValue = fruit.includes("apple"); // ("apple", 0) idx 0번째에 있느냐까지 물어보는 것임
+      console.log(numValue); // 3이 있느냐 없느냐 true/false로 알려줌
+      // num.filter(() => {});
+    </script>
+  </body>
+</html>
