@@ -1,7 +1,7 @@
 <template>
   <div>
     <NavbarView />
-    <SearchbarView @searchCity="searchCity" />
+    <SearchbarView @msearchCity="searchCity" />
     <WeatherView :data="weatherData" />
     <!-- {{ weatherData }} -->
   </div>
