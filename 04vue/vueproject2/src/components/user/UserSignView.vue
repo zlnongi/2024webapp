@@ -33,7 +33,13 @@
       />
     </div>
     <div class="input-group mb-3">
-      <input type="file" class="form-control" id="fileform" />
+      <input
+        type="file"
+        class="form-control"
+        id="fileform"
+        @change="handleImage"
+        accept="image/"
+      />
       <label class="input-group-text" for="fileform">Upload</label>
     </div>
     <div class="btn btn-primary" @click="addUser">회원가입</div>
@@ -60,6 +66,7 @@ const clearform = () => {
   userdata.value.password = null;
   userdata.value.username = null;
   userdata.value.addr = null;
+  userdata.value.image = null;
 };
 
 const addUser = () => {
@@ -69,9 +76,19 @@ const addUser = () => {
     password: userdata.value.password,
     username: userdata.value.username,
     addr: userdata.value.addr,
+    image: userdata.value.image,
   }; // 데이터 한번 받아서 보내줘야함 원본 보내면안돼!
   store.commit("addUser", uData); // mutation된다 데이터를 꽂아넣음 !!
   clearform();
+};
+
+const handleImage = (e) => {
+  // 이벤트 핸들러임 !!
+  const file = e.target.files[0];
+  console.log(file);
+  if (file) {
+    userdata.value.image = URL.createObjectURL(file);
+  }
 };
 </script>
 
