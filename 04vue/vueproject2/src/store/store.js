@@ -14,7 +14,7 @@ export default createStore({
         userid: "ganggang",
         password: "123",
         username: "장윤경",
-        addr: "안양",
+        addr: "의왕",
         iamge: "test.jpg",
       },
       {
@@ -26,5 +26,9 @@ export default createStore({
       },
     ],
   },
-  mutations: {},
+  mutations: {
+    addUser(state, payload) {
+      state.userData.push(payload);
+    },
+  },
 });

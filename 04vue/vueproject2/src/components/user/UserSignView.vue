@@ -1,0 +1,78 @@
+<template>
+  <div>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="userid"
+        v-model="userdata.userid"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="password"
+        v-model="userdata.password"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="username"
+        v-model="userdata.username"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="addr"
+        v-model="userdata.addr"
+      />
+    </div>
+    <div class="input-group mb-3">
+      <input type="file" class="form-control" id="fileform" />
+      <label class="input-group-text" for="fileform">Upload</label>
+    </div>
+    <div class="btn btn-primary" @click="addUser">회원가입</div>
+  </div>
+  {{ userdata }}
+</template>
+
+<script setup>
+import { ref } from "vue";
+import { useStore } from "vuex";
+
+const store = useStore();
+const userdata = ref({
+  // 초기 data
+  userid: null,
+  password: null,
+  username: null,
+  addr: null,
+  image: null,
+});
+
+const clearform = () => {
+  userdata.value.userid = null;
+  userdata.value.password = null;
+  userdata.value.username = null;
+  userdata.value.addr = null;
+};
+
+const addUser = () => {
+  //   alert("test");
+  let uData = {
+    userid: userdata.value.userid,
+    password: userdata.value.password,
+    username: userdata.value.username,
+    addr: userdata.value.addr,
+  }; // 데이터 한번 받아서 보내줘야함 원본 보내면안돼!
+  store.commit("addUser", uData); // mutation된다 데이터를 꽂아넣음 !!
+  clearform();
+};
+</script>
+
+<style lang="scss" scoped></style>
