@@ -28,7 +28,10 @@
             <router-link to="/about" class="nav-link">ABOUT</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/portfolio" class="nav-link"
+            <router-link
+              :to="{ name: 'portfolio' }"
+              class="nav-link"
+              :class="{ active: $route.name === 'portfolioView', view: true }"
               >PORTFOLIO</router-link
             >
           </li>
