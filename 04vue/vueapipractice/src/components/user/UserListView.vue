@@ -1,7 +1,7 @@
 <template>
   <div>userlist</div>
-  <p>Username: {{ user.username }}</p>
-  <p>Address: {{ user.addr }}</p>
+  <!-- <p>Username: {{ user.username }}</p>
+  <p>Address: {{ user.addr }}</p> -->
   {{ $store.state.useData }}
   <div v-for="(item, i) in $store.state.useData" :key="i"></div>
 </template>
