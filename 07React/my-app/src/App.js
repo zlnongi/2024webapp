@@ -1,47 +1,46 @@
 import React, { useState } from "react";
+import ModalView from "./components/ModalView";
 
 function App() {
-  const [data, setData] = useState("test");
+  const [data, setData] = useState([
+    "1.Lorem ipsum dolor sit amet.",
+    "2.Lorem ipsum dolor sit amet.",
+    "3.Loremipsum dolor sit amet.",
+    "4.Lorem ipsum dolor sit amet.",
+  ]);
 
-  function dataChange() {
-    setData("testChange");
-  }
+  const [num, setNum] = useState(0);
+  const [modal, setModal] = useState(false);
 
-  function dataChange1() {
-    setData("testChange1");
-  }
+  const listView = (i) => {
+    // alert("test" + i);
+    setNum(i);
+    setModal(true);
+  };
+
+  const handleClose = () => {
+    setModal(false);
+  };
 
   return (
-    <div style={{ background: "pink", padding: "10px" }}>
+    <div>
       App
-      {/* test 였다가 testChange로 바뀜 */}
-      <SubCom1 data={data} dataModi1={dataChange} sdataModi2={dataChange1} />
+      {data.map((item, i) => {
+        return (
+          <div
+            key={i}
+            onClick={() => {
+              listView(i);
+            }}
+          >
+            {item}
+          </div>
+        );
+      })}
+      {modal == true ? (
+        <ModalView vContent={data[num]} onClose={handleClose} />
+      ) : null}
     </div>
-  );
-}
-
-function SubCom1(props) {
-  return (
-    <>
-      <div style={{ background: "skyblue", padding: "10px" }}>
-        <h3>subcom1</h3>
-        <p>{props.data}</p>
-        <button onClick={props.dataModi1}>변경1</button>
-        <SubCom2 sData={props.data} dataModi2={props.sdataModi2} />
-      </div>
-    </>
-  );
-}
-
-function SubCom2(props) {
-  return (
-    <>
-      <div style={{ backgroundColor: "green" }}>
-        <h3>subcom2</h3>
-        <p>{props.sData}</p>
-        <button onClick={props.dataModi2}>변경2</button>
-      </div>
-    </>
   );
 }
 
