@@ -1,0 +1,10 @@
+@import "./assets/css/tailstyle.css";
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.visual {
+  background: url(./assets/images/bgimg.jpg);
+}

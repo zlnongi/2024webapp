@@ -29,7 +29,7 @@ function App() {
       />
       <button
         onClick={() => {
-          let copy = [...pro]; // pro값 복사해서 copy에 저장
+          let copy = [...pro]; // pro값 복사해서 copy에 저장 -> 깊은 복사
           copy.unshift(input); // input값으로 들어온걸 배열 가장 앞으로 저장
           setPro(copy); // 새로 저장된걸 Pro에 다시 저장함
           setInput("");
