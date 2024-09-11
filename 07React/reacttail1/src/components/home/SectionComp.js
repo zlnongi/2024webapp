@@ -4,7 +4,11 @@ function SectionComp() {
   return (
     <>
       <div className="container mx-auto">
-        <div className="flex flex-wrap px-4">
+        <div className="text-center py-4 pt-10">
+          <h4 className="text-2xl">TITLE</h4>
+          <p>testtesttesttesttesttest</p>
+        </div>
+        <div className="flex flex-wrap gap-3 sm:gap-0 lg:flex-nowrap lg:gap-3 px-4 drop-shadow-lg hover:drop-shadow-2xl hover:translate-x-3 hover:-translate-y-2 transition">
           <div className="w-full md:w-1/2 lg:w-1/4 bg-gray-100 rounded-xl overflow-hidden">
             <img src="./images/pro1.jpg" className="w-full" />
             <div className="px-4 py-4">
