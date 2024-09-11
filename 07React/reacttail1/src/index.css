@@ -6,5 +6,6 @@ body {
 }
 
 .visual {
-  background: url(./assets/images/bgimg.jpg);
+  background: url(./assets/images/bgimg.jpg) no-repeat center;
+  background-size: cover;
 }
