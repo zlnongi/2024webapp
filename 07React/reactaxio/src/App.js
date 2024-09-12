@@ -20,6 +20,7 @@ function App() {
   };
 
   useEffect(() => {
+    // 여러개 쓸 수 있다, 함수로 빼서도 쓸 수 있다
     api();
   }, []);
 
@@ -27,7 +28,7 @@ function App() {
     const pageNumbers = [];
     const startPage = Math.floor(((currentpage - 1) / listCnt) * listCnt + 1);
     //const endPage = startPage + listCnt - 1;
-    const endPage = Math.min(startPage + pagerCnt - 1, totalPage);
+    const endPage = Math.min(startPage + pagerCnt - 1, totalPage); // 둘중에 작은거 사용 min이니까
 
     for (let i = startPage; i <= endPage; i++) {
       // 여기서 i는 내가 있는 현재위치
