@@ -1,16 +1,7 @@
 import React from "react";
-import NavComp from "./layout/NavComp";
-import VisualComp from "./components/home/VisualComp";
-import SectionComp from "./components/home/SectionComp";
 
-function App(props) {
-  return (
-    <>
-      <NavComp />
-      <VisualComp />
-      <SectionComp />
-    </>
-  );
+function App() {
+  return <div>App</div>;
 }
 
 export default App;
