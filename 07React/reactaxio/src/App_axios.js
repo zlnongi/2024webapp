@@ -12,7 +12,7 @@ function App() {
     axios.get("https://jsonplaceholder.typicode.com/posts").then((res) => {
       console.log(res.data);
       setData(res.data);
-      console.log("total data: " + res.data.length);
+      console.log("total data: " + res.data.length); // response받은 data를 가져와야하므로 res.data.length
       console.log("total page: " + res.data.length / listCnt);
 
       setTotalpage(res.data.length / listCnt);
