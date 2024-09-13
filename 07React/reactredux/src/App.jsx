@@ -2,64 +2,93 @@ import React from "react";
 import { Provider, useDispatch, useSelector } from "react-redux";
 import { createStore } from "redux";
 
-// -- store file
-const init = {
-  // init과 state을 연결시켜야함 state=init로 만들어줌 (initial data)
-  value: 100,
-  title: "test",
+const initalData = {
+  cart: [],
 };
 
-const reducer = (state = init, action) => {
-  // reducer라는 이름을 쓴거임 그냥
+const reducer = (state = initalData, action) => {
+  console.log(action);
 
-  // 함수 -> 조건문, switch문 등 action
-  console.log(state);
-  console.log(action.type);
-  if (action.type == "up") {
-    return { ...state, value: state.value + action.payload };
-  }
-  if (action.type == "down") {
-    return { ...state, value: state.value - action.payload };
+  switch (action.type) {
+    case "add_cart":
+      return { ...state, cart: [...state.cart, action.payload] };
+    case "remove_cart":
+      return {
+        ...state,
+        cart: state.cart.filter((item) => item.id !== action.payload),
+      };
+    default:
+      return state;
   }
 
-  return state; // state값 변경
+  // return state;
 };
-const store = createStore(reducer); // reducer가 state값인거임 (provider값?? 값을 변화시키는 중간 매체 = reducer)
-// -- store file
+
+const store = createStore(reducer);
 
 function App() {
   return (
     <Provider store={store}>
-      <div>test</div>
-      <Counter />
+      <div>shop</div>
+      <hr />
+      <ProductList />
+      <hr />
+      <Cart />
     </Provider>
   );
 }
 
-function Counter() {
-  //const counterValue = useSelector((state)=>{return state.value})
-  const counterValue = useSelector((state) => state.value); // data 가져옴
-  const titleValue = useSelector((state) => state.title);
+const products = [
+  { id: 1, name: "product1" },
+  { id: 2, name: "product2" },
+  { id: 3, name: "product3" },
+  { id: 4, name: "product4" },
+];
 
+function ProductList() {
   const dispatch = useDispatch();
+
+  const cartItems = useSelector((state) => state.cart);
+
+  const addCart = (item) => {
+    dispatch({ type: "add_cart", payload: item });
+  };
 
   return (
     <>
-      {counterValue} / {titleValue}
-      <button
-        onClick={() => {
-          dispatch({ type: "up", payload: 1 }); // data 반영, 변경
-        }}
-      >
-        클릭
-      </button>
-      <button
-        onClick={() => {
-          dispatch({ type: "down", payload: 1 });
-        }}
-      >
-        다운
-      </button>
+      <div>product / cart({cartItems.length})</div>
+      {products.map((item, i) => {
+        return (
+          <div key={i}>
+            {item.id} / {item.name}
+            <button onClick={() => addCart(item)}>장바구니 추가</button>
+          </div>
+        );
+      })}
+    </>
+  );
+}
+
+function Cart() {
+  const cartItems = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+  console.log("cart 개수 : " + cartItems.length);
+
+  const removeCart = (item) => {
+    dispatch({ type: "remove_cart", payload: item });
+  };
+
+  return (
+    <>
+      <div>cart</div>
+      {cartItems.map((item, i) => {
+        return (
+          <div key={i}>
+            {item.id} / {item.name}
+            <button onClick={() => removeCart(item.id)}>장바구니제거</button>
+          </div>
+        );
+      })}
     </>
   );
 }
