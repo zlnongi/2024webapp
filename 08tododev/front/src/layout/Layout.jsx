@@ -14,6 +14,9 @@ function Layout({ children }) {
             <li>
               <Link to="/about">ABOUT</Link>
             </li>
+            <li>
+              <Link to="/todo">TODO</Link>
+            </li>
           </ul>
         </div>
       </nav>
