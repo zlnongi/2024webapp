@@ -2,11 +2,11 @@ import React from "react";
 import { Provider, useDispatch, useSelector } from "react-redux";
 import { createStore } from "redux";
 
-const initalData = {
+const initialData = {
   cart: [],
 };
 
-const reducer = (state = initalData, action) => {
+const reducer = (state = initialData, action) => {
   console.log(action);
 
   switch (action.type) {
@@ -24,7 +24,7 @@ const reducer = (state = initalData, action) => {
   // return state;
 };
 
-const store = createStore(reducer);
+const store = createStore(reducer); // 전엵적으로 저장할 저장ㅎ소
 
 function App() {
   return (
@@ -70,7 +70,7 @@ function ProductList() {
 }
 
 function Cart() {
-  const cartItems = useSelector((state) => state.cart);
+  const cartItems = useSelector((state) => state.cart); // state의 변화를 구독
   const dispatch = useDispatch();
   console.log("cart 개수 : " + cartItems.length);
 

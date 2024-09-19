@@ -14,7 +14,7 @@ const reducer = (state = init, action) => {
 
   // 함수 -> 조건문, switch문 등 action
   console.log(state);
-  console.log(action.type);
+  console.log(action.type); // action type에 따라서..
   if (action.type == "up") {
     return { ...state, value: state.value + action.payload };
   }
