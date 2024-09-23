@@ -1,7 +1,14 @@
 import React from "react";
+import ReadCompo from "../../components/ReadCompo";
+import { useParams } from "react-router-dom";
 
 function ReadPage() {
-  return <div>ReadPage</div>;
+  const { tno } = useParams();
+  return (
+    <div>
+      <ReadCompo tno={tno} />
+    </div>
+  );
 }
 
 export default ReadPage;

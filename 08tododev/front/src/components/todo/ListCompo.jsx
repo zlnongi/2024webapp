@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { getList } from "../../api/todoApi";
 import { useSearchParams } from "react-router-dom";
 import useCustomMove from "../../hooks/useCustomMove";
+import PagerComp from "../common/PagerCompo";
 
 const initState = {
   dtoList: [],
@@ -17,8 +18,8 @@ const initState = {
 };
 
 function ListCompo() {
+  const { page, size, moveToRead, refresh, moveToList } = useCustomMove();
   const [data, setData] = useState(initState);
-  const { page, size } = useCustomMove();
 
   //   const [queryParams] = useSearchParams();
   //   console.log(queryParams.get("size")); // 이거 왜 다 null로 뜨냐 ㅠㅠ
@@ -33,18 +34,26 @@ function ListCompo() {
       console.log(res);
       setData(res);
     });
-  }, [page, size]); // axios 불러옴
+  }, [page, size, refresh]); // axios 불러옴
   return (
     <div>
       {data.dtoList.map((item, i) => {
         return (
-          <div key={i} className="flex border-b-2 py-3">
+          <div
+            key={i}
+            className="flex border-b-2 py-3"
+            onClick={() => {
+              moveToRead(item.tno);
+            }}
+          >
             <div className="text-2xl w-1/12">{item.tno}</div>
             <div className="text-2xl w-8/12 font-extrabold">{item.title}</div>
             <div className="text-2xl w-3/12">{item.dueData}</div>
           </div>
         );
       })}
+
+      <PagerComp serverData={data} movePage={moveToList} />
     </div>
   );
 }

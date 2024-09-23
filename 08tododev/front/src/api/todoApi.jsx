@@ -12,12 +12,12 @@ export const getList = async (pageParam) => {
   return res.data;
 };
 
-export const getOne = (tno) => {
-  axios.get(`${perfix}/${tno}`);
-  return res;
+export const getOne = async (tno) => {
+  const res = await axios.get(`${perfix}/${tno}`);
+  return res.data;
 };
 
 export const postAdd = (obj) => {
   const res = axios.post(`${perfix}/`, obj);
-  return res;
+  return res.data;
 };
