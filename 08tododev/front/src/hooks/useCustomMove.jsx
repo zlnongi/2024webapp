@@ -48,8 +48,25 @@ const useCustomMove = () => {
     navigate({ pathname: `../list/${num}`, search: queryDefault });
   };
 
+  const moveToWrite = () => {
+    navigate({ pathname: `../add` });
+  };
+
+  const moveToModi = (num) => {
+    // num은 tno 값
+    navigate({ pathname: `../modi/${num}`, search: queryDefault });
+  };
+
   //setRefresh(!refresh);
-  return { page, size, moveToList, moveToRead, refresh };
+  return {
+    page,
+    size,
+    moveToList,
+    moveToRead,
+    refresh,
+    moveToWrite,
+    moveToModi,
+  };
 };
 
 export default useCustomMove;

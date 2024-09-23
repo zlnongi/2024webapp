@@ -1,14 +1,14 @@
 import React from "react";
-import ReadCompo from "../../components/todo/ReadCompo";
+import ModiCompo from "../../components/todo/ModiCompo";
 import { useParams } from "react-router-dom";
 
-function ReadPage() {
+function ModifyPage() {
   const { tno } = useParams();
   return (
     <div>
-      <ReadCompo tno={tno} />
+      <ModiCompo tno={tno} />
     </div>
   );
 }
 
-export default ReadPage;
+export default ModifyPage;

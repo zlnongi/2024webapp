@@ -1,7 +1,12 @@
 import React from "react";
+import AddCompo from "../../components/todo/addCompo";
 
 function AddPage() {
-  return <div>AddPage</div>;
+  return (
+    <div>
+      <AddCompo />
+    </div>
+  );
 }
 
 export default AddPage;
