@@ -22,7 +22,7 @@ export const postAdd = (obj) => {
   return res.data;
 };
 
-const deleteOne = async (tno) => {
+export const deleteOne = async (tno) => {
   const res = await axios.delete(`${perfix}/${tno}`);
   return res.data;
 };

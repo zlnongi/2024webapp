@@ -27,7 +27,7 @@ function ResultModal({ title, content, callbackFn }) {
                 }
               }}
             >
-              Close Modal
+              닫기
             </button>
           </div>
         </div>

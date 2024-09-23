@@ -40,7 +40,7 @@ function ReadCompo({ tno }) {
         <button
           className="bg-blue-500 rounded py-2 px-4 text-white"
           onClick={() => {
-            moveToModi({ tno });
+            moveToModi(tno);
           }}
         >
           수정
