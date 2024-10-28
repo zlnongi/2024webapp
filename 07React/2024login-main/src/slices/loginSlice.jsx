@@ -1,8 +1,12 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   email: "",
 };
+
+export const loginPostAsync = createAsyncThunk("loginPostAsync", (param) =>
+  loginPost(param)
+);
 
 const loginSlice = createSlice({
   name: "loginSlice",
@@ -15,7 +19,20 @@ const loginSlice = createSlice({
     },
     logout: () => {
       console.log("로그아웃...out!!!");
+      return { ...initialState };
     },
+  },
+  extraReducers: (builder) => {
+    builder
+      .addCase(loginPostAsync.fulfilled, () => {
+        console.log("fulfill");
+      })
+      .addCase(loginPostAsync.pending, () => {
+        console.log("pending");
+      })
+      .addCase(loginPostAsync.rejected, () => {
+        console.log("rejected");
+      });
   },
 });
 

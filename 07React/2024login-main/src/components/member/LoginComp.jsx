@@ -17,7 +17,7 @@ function LoginComp() {
   };
 
   const handleClickLogin = () => {
-    dispatch(login());
+    dispatch(loginPostAsync(loginParam));
   };
 
   return (
@@ -63,7 +63,10 @@ function LoginComp() {
                   />
                 </div>
                 <div className="flex justify-end"></div>
-                <button className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200">
+                <button
+                  className="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 rounded shadow-lg hover:shadow-xl transition duration-200"
+                  onClick={handleClickLogin}
+                >
                   Sign In
                 </button>
               </div>
