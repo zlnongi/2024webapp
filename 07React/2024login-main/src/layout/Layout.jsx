@@ -1,7 +1,10 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 function Layout({ children }) {
+  const loginstate = useSelector((state) => state.loginSlice);
+  console.log(loginState);
   return (
     <>
       <nav className="bg-blue-200 px-4">
@@ -12,11 +15,21 @@ function Layout({ children }) {
               <Link to="/">HOME</Link>
             </li>
             <li>
-              <Link to="/about">ABOUT1</Link>
+              <Link to="/about">ABOUT</Link>
             </li>
-            {/* <li>
-              <Link to="/todo">TODO</Link>
-            </li> */}
+            {loginState.email ? (
+              <>
+                <li>
+                  <Link to="/member/logout">LOGOUT</Link>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <Link to="/member/login">LOGIN</Link>
+                </li>
+              </>
+            )}
           </ul>
         </div>
       </nav>
