@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const initState = {
   email: "",
@@ -10,6 +11,7 @@ function LoginComp() {
   const [loginParam, setLoginParam] = useState({ ...initState });
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     loginParam[e.target.name] = e.target.value;
@@ -17,7 +19,15 @@ function LoginComp() {
   };
 
   const handleClickLogin = () => {
-    dispatch(loginPostAsync(loginParam));
+    dispatch(loginPostAsync(loginParam))
+      .unwrap()
+      .then((data) => {
+        if (data.error) {
+          alert("이메일과 패스워드 확인");
+        } else {
+          navigate({ pathname: "/" }, { replace: true }); // 첫페이지로 이동
+        }
+      });
   };
 
   return (
