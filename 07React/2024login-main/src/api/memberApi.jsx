@@ -15,5 +15,5 @@ export const loginPost = async (loginParam) => {
   form.append("password", loginParam.pw);
 
   const res = await axios.post(`${host}/login`, form.header);
-  return res.data; // data 뱉어냄
+  return res.data; // data로 뱉어냄
 };
